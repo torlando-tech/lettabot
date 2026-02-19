@@ -368,6 +368,7 @@ function createChannelsForAgent(
       cliPath: agentConfig.channels.signal.cliPath || process.env.SIGNAL_CLI_PATH || 'signal-cli',
       httpHost: agentConfig.channels.signal.httpHost || process.env.SIGNAL_HTTP_HOST || '127.0.0.1',
       httpPort: agentConfig.channels.signal.httpPort || parseInt(process.env.SIGNAL_HTTP_PORT || '8090', 10),
+      startupTimeoutMs: agentConfig.channels.signal.startupTimeoutMs || parseInt(process.env.SIGNAL_STARTUP_TIMEOUT_MS || '30000', 10),
       dmPolicy: agentConfig.channels.signal.dmPolicy || 'pairing',
       allowedUsers: agentConfig.channels.signal.allowedUsers && agentConfig.channels.signal.allowedUsers.length > 0
         ? agentConfig.channels.signal.allowedUsers

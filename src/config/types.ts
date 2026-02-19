@@ -263,6 +263,7 @@ export interface SignalConfig {
   cliPath?: string;     // Path to signal-cli binary (default: "signal-cli")
   httpHost?: string;    // Daemon HTTP host (default: "127.0.0.1")
   httpPort?: number;    // Daemon HTTP port (default: 8090)
+  startupTimeoutMs?: number;  // Max time to wait for daemon startup (default: 30000)
   selfChat?: boolean;
   dmPolicy?: 'pairing' | 'allowlist' | 'open';
   allowedUsers?: string[];
